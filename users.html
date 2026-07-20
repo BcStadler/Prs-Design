@@ -16,22 +16,24 @@
       {{> nav}}
       <section class="content p-4 flex-grow-1">
         <div
-          class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2"
+          class="d-flex justify-content-between align-items-center pb-4 mb-4 border-bottom border-2"
         >
-          <h2>Staff</h2>
-          <a href="/user-create.html" class="btn btn-primary">
-            <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
+          <h2>Users</h2>
+          <a
+            href="/user-create.html"
+            class="btn btn-primary d-flex align-items-center gap-2"
+          >
+            <svg class="bi pe-none" width="20" height="20" fill="#FFFFFF">
               <use href="/assets/bootstrap-icons.svg#plus" />
             </svg>
-            Add User
+            Create a user
           </a>
         </div>
         <section
-          class="list d-flex flex-row flex-wrap bg-light gap-5 p-4 rounded-4"
+          class="list d-flex flex-row flex-wrap bg-light gap-4 p-4 rounded-4"
         >
-          <div class="card" style="width: 30rem">
-            <div class="progress"></div>
-            <div class="py-4 px-4">
+          <div class="card shadow-sm rounded-4" style="width: 30rem">
+            <div class="card-body py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -68,15 +70,17 @@
                   </ul>
                 </div>
               </div>
-              <div class="d-flex gap-3 mb-3 user-card-header">
-                <div class="avatar-initial">JR</div>
+              <div class="d-flex gap-3 mb-3 align-items-center">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white fw-bold"
+                  style="width: 72px; height: 72px; font-size: 1.25rem"
+                >
+                  ES
+                </div>
                 <div>
-                  <span class="fs-4 lh-l fw-medium">Jordan Reyes</span><br />
-                  <span class="fs-6 fw-lighter">jreyes</span><br />
-                  <span class="fs-6 fw-lighter">(123) 456-7890</span><br />
-                  <span class="fs-6 fw-lighter">jreyes@email.com</span><br />
-                  <span class="badge text-bg-primary mt-1">Reviewer</span>
-                  <span class="badge text-bg-dark mt-1">Admin</span>
+                  <span class="fs-5 fw-semibold">Ellinore Steubet</span><br />
+                  <span class="small text-secondary">Admin</span><br />
+                  <span class="small text-secondary">(123) 456-7890</span><br />
                 </div>
               </div>
             </div>
