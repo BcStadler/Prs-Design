@@ -20,13 +20,13 @@
         >
           <h2>Requests</h2>
           <a href="/request-create.html" class="btn btn-primary">
-            <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
+            <svg class="bi pe-none me-2" width="24" height="24" fill="#FFFFFF">
               <use href="/assets/bootstrap-icons.svg#plus" />
             </svg>
-            Create a Request
+            Create a request
           </a>
         </div>
-        <div class="d-flex flex-column mb-4" style="width: 250px">
+        <div class="mb-4" style="width: 200px">
           <label for="status" class="form-label">Status</label>
           <select id="status" class="form-select">
             <option value="">All</option>
@@ -37,11 +37,15 @@
           </select>
         </div>
         <section
-          class="d-flex flex-row flex-wrap bg-body-tertiary gap-5 p-4 rounded-4"
-          style="width: 100%; height: max-content; overflow-x: auto"
+          class="d-flex flex-row flex-wrap gap-5 p-4 rounded-4"
+          style="
+            width: 100%;
+            height: max-content;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
         >
           <table
-            class="table table-hover w-75 rounded-4"
+            class="table table-hover w-100 rounded-4 mb-0"
             style="min-width: 960px"
           >
             <thead>
@@ -56,24 +60,28 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">201</th>
-                <td class="text-body-secondary small text-wrap">
-                  Office Supplies
+                <th scope="row">1</th>
+                <td>
+                  <div class="text-body-emphasis">Office Supplies</div>
+                  <div class="text-body-secondary small">Need to reup</div>
                 </td>
                 <td><span class="badge text-bg-success">Approved</span></td>
-                <td>$23.98</td>
-                <td>Casey Nguyen</td>
+                <td>$290.19</td>
+                <td>
+                  <div class="text-body-emphasis">Russel Kassulke</div>
+                  <div class="text-body-secondary small">Pickup</div>
+                </td>
                 <td>
                   <div class="dropdown d-inline">
                     <button
                       class="btn btn-light"
-                      style="background: none"
+                      style="background: none; border: none"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       <svg
-                        class="bi pe-none me-2"
+                        class="bi pe-none"
                         width="20"
                         height="20"
                         fill="#007AFF"
@@ -85,12 +93,12 @@
                     </button>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="/order-detail.html"
+                        <a class="dropdown-item" href="/request-detail.html"
                           >View</a
                         >
                       </li>
                       <li>
-                        <a class="dropdown-item" href="/order-edit.html"
+                        <a class="dropdown-item" href="/request-edit.html"
                           >Edit</a
                         >
                       </li>
@@ -107,7 +115,182 @@
                   </div>
                 </td>
               </tr>
-              <!-- more <tr> rows, one per order -->
+              <tr>
+                <th scope="row">2</th>
+                <td>
+                  <div class="text-body-emphasis">Laptop Stand</div>
+                  <div class="text-body-secondary small">
+                    Ergonomic improvement for remote work
+                  </div>
+                </td>
+                <td><span class="badge text-bg-info">New</span></td>
+                <td>$0</td>
+                <td>
+                  <div class="text-body-emphasis">Elinore Steubet</div>
+                  <div class="text-body-secondary small">Delivery</div>
+                </td>
+                <td>
+                  <div class="dropdown d-inline">
+                    <button
+                      class="btn btn-light"
+                      style="background: none; border: none"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="bi pe-none"
+                        width="20"
+                        height="20"
+                        fill="#007AFF"
+                      >
+                        <use
+                          href="/assets/bootstrap-icons.svg#three-dots-vertical"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/request-detail.html"
+                          >View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/request-edit.html"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleteRequestModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>
+                  <div class="text-body-emphasis">Monitor Arms</div>
+                  <div class="text-body-secondary small">
+                    Dual monitor setup for design team
+                  </div>
+                </td>
+                <td><span class="badge text-bg-warning">Review</span></td>
+                <td>$0</td>
+                <td>
+                  <div class="text-body-emphasis">Elinore Steubet</div>
+                  <div class="text-body-secondary small">
+                    Signature Delivery
+                  </div>
+                </td>
+                <td>
+                  <div class="dropdown d-inline">
+                    <button
+                      class="btn btn-light"
+                      style="background: none; border: none"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="bi pe-none"
+                        width="20"
+                        height="20"
+                        fill="#007AFF"
+                      >
+                        <use
+                          href="/assets/bootstrap-icons.svg#three-dots-vertical"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/request-detail.html"
+                          >View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/request-edit.html"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleteRequestModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>
+                  <div class="text-body-emphasis">Whiteboard Markers</div>
+                  <div class="text-body-secondary small">
+                    Restocking conference room supplies
+                  </div>
+                </td>
+                <td><span class="badge text-bg-danger">Rejected</span></td>
+                <td>$0</td>
+                <td>
+                  <div class="text-body-emphasis">Elinore Steubet</div>
+                  <div class="text-body-secondary small">Pickup</div>
+                </td>
+                <td>
+                  <div class="dropdown d-inline">
+                    <button
+                      class="btn btn-light"
+                      style="background: none; border: none"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="bi pe-none"
+                        width="20"
+                        height="20"
+                        fill="#007AFF"
+                      >
+                        <use
+                          href="/assets/bootstrap-icons.svg#three-dots-vertical"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/request-detail.html"
+                          >View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/request-edit.html"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleteRequestModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
             </tbody>
           </table>
         </section>
