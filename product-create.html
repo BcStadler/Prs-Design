@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TableServe — New Menu Item</title>
+    <title>Prs — New Product</title>
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -20,7 +20,11 @@
         >
           <h2>New Product</h2>
         </div>
-        <form class="d-flex flex-column gap-4 w-75">
+        <form
+          class="d-flex flex-column gap-4 w-75"
+          novalidate
+          data-success="/users.html"
+        >
           <div class="d-flex flex-wrap gap-4 w-100">
             <div
               class="mb-3 flex-grow-1"
@@ -34,7 +38,9 @@
                 type="text"
                 class="form-control"
                 placeholder="Enter product number"
+                required
               />
+              <div class="invalid-feedback">Product Number is required</div>
             </div>
             <div class="mb-3 flex-grow-1" style="min-width: 320px">
               <label for="name" class="form-label">Product Name</label>
@@ -43,7 +49,9 @@
                 type="text"
                 class="form-control"
                 placeholder="Enter product name"
+                required
               />
+              <div class="invalid-feedback">Product Name is required</div>
             </div>
           </div>
 
@@ -58,8 +66,10 @@
                 type="number"
                 step="0.01"
                 class="form-control"
-                placeholder="Enter product's"
+                placeholder="Enter Price"
+                required
               />
+              <div class="invalid-feedback">Price is required</div>
             </div>
             <div
               class="mb-3 flex-grow-1"
@@ -75,12 +85,13 @@
             </div>
             <div class="mb-3 flex-grow-2" style="min-width: 240px">
               <label for="vendorId" class="form-label">Vendor</label>
-              <select id="vendorId" class="form-select">
+              <select id="vendorId" class="form-select" required>
                 <option value="">Select Vendor...</option>
                 <option value="1">Vendor A</option>
                 <option value="2">Vendor B</option>
                 <option value="3">Vendor C</option>
               </select>
+              <div class="invalid-feedback">Vendor is required</div>
             </div>
           </div>
 
@@ -102,5 +113,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>
