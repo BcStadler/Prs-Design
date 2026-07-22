@@ -9,6 +9,14 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      .field-static-select {
+        max-width: 320px;
+        background-color: var(--bs-secondary-bg);
+        color: var(--bs-secondary-color);
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     {{>header}}
@@ -66,11 +74,7 @@
 
                 <div class="mb-4">
                   <label for="status" class="form-label">Status</label>
-                  <select
-                    id="status"
-                    class="form-select"
-                    style="max-width: 250px"
-                  >
+                  <select id="status" class="form-select field-static-select">
                     <option value="NEW" selected>New</option>
                     <option value="APPROVED">Approved</option>
                     <option value="REVIEW">Review</option>
@@ -84,9 +88,9 @@
                   >
                   <select
                     id="requested-By"
-                    class="form-select"
-                    style="max-width: 250px"
+                    class="form-select field-static-select"
                   >
+                    <option value="hope" selected>Hope Hodkiewicz</option>
                     <option value="ellie">Elinore Steubet</option>
                     <option value="casey">Casey Nguyen</option>
                     <option value="alex">Alex Porter</option>
