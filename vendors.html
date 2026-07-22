@@ -9,6 +9,12 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      /* Override card top bar color locally (no changes to styles.css or partials) */
+      .card > .progress .progress-bar {
+        background-color: #007aff !important;
+      }
+    </style>
   </head>
   <body>
     {{> header}}
@@ -23,7 +29,7 @@
             href="/vendor-create.html"
             class="btn btn-primary d-flex align-items-center gap-2"
           >
-            <svg class="bi pe-none" width="20" height="20" fill="#FFFFFF">
+            <svg class="bi pe-none" width="30" height="30" fill="#FFFFFF">
               <use href="/assets/bootstrap-icons.svg#plus" />
             </svg>
             Create a vendor
@@ -31,17 +37,17 @@
         </div>
 
         <section
-          class="list d-flex flex-row flex-wrap bg-light gap-4 p-4 rounded-2"
+          class="list d-flex flex-row flex-wrap bg-light gap-5 p-4 rounded-"
         >
-          <div class="card shadow-sm rounded-4" style="width: 30rem">
-            <div
-              style="
-                height: 4px;
-                background-color: #007aff;
-                border-radius: 0.75rem 0.75rem 0 0;
-              "
-            ></div>
-            <div class="card-body py-4 px-4">
+          <div class="card" style="width: 23rem">
+            <div class="progress">
+              <div
+                class="progress-bar bg-primary-subtle"
+                role="progressbar"
+                style="width: 60%"
+              ></div>
+            </div>
+            <address class="py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -78,36 +84,27 @@
                   </ul>
                 </div>
               </div>
-              <div>
-                <div class="mb-2">
-                  <span class="fs-5 fw-semibold"
-                    >Bailey, Baumbach and Senger</span
-                  >
-                </div>
-                <div class="mb-3">
-                  <span class="badge bg-secondary">Mcke-nz</span>
-                </div>
-                <div>
-                  <p class="mb-1 text-secondary small">3293 State Street</p>
-                  <p class="mb-1 text-secondary small">
-                    Considinetown, ME 16819
-                  </p>
-                  <p class="mb-1 text-secondary small">(229) 372-9117</p>
-                  <p class="mb-0 text-secondary small">ssupport@BAIL-EY.com</p>
-                </div>
-              </div>
-            </div>
+              <br />
+              <span class="fs-4 lh-l fw-medium">McKenzie Group</span><br />
+              <div class="badge text bg-secondary mt-1">Mcke-nz</div>
+              <br />
+              <br />
+              <p class="mb-1 text-secondary small">7319 Aubree Bridge</p>
+              <p class="mb-1 text-secondary small">Wuckertside, LA 22245</p>
+              <p class="mb-1 text-secondary small">(940) 859-5147</p>
+              <p class="mb-0 text-secondary small">support@MCKE-NZ.com</p>
+            </address>
           </div>
 
-          <div class="card shadow-sm rounded-4" style="width: 30rem">
-            <div
-              style="
-                height: 4px;
-                background-color: #007aff;
-                border-radius: 0.75rem 0.75rem 0 0;
-              "
-            ></div>
-            <div class="card-body py-4 px-4">
+          <div class="card" style="width: 23rem">
+            <div class="progress">
+              <div
+                class="progress-bar bg-primary-subtle"
+                role="progressbar"
+                style="width: 60%"
+              ></div>
+            </div>
+            <address class="py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -144,32 +141,27 @@
                   </ul>
                 </div>
               </div>
-              <div>
-                <div class="mb-2">
-                  <span class="fs-5 fw-semibold">Rempel LLC</span>
-                </div>
-                <div class="mb-3">
-                  <span class="badge bg-secondary">Remp-el</span>
-                </div>
-                <div>
-                  <p class="mb-1 text-secondary small">60610 Grange Close</p>
-                  <p class="mb-1 text-secondary small">West Ewell, CO 71293</p>
-                  <p class="mb-1 text-secondary small">(589) 486-5653</p>
-                  <p class="mb-0 text-secondary small">support@REMP-EL.com</p>
-                </div>
-              </div>
-            </div>
+              <br />
+              <span class="fs-4 lh-l fw-medium">Rempel LLC</span><br />
+              <div class="badge text bg-secondary mt-1">Remp-el</div>
+              <br />
+              <br />
+              <p class="mb-1 text-secondary small">60610 Grange Close</p>
+              <p class="mb-1 text-secondary small">West Ewell, CO 71293</p>
+              <p class="mb-1 text-secondary small">(589) 486-5653</p>
+              <p class="mb-0 text-secondary small">support@REMP-EL.com</p>
+            </address>
           </div>
 
-          <div class="card shadow-sm rounded-4" style="width: 30rem">
-            <div
-              style="
-                height: 4px;
-                background-color: #007aff;
-                border-radius: 0.75rem 0.75rem 0 0;
-              "
-            ></div>
-            <div class="card-body py-4 px-4">
+          <div class="card" style="width: 23rem">
+            <div class="progress">
+              <div
+                class="progress-bar bg-primary-subtle"
+                role="progressbar"
+                style="width: 60%"
+              ></div>
+            </div>
+            <address class="py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -206,34 +198,28 @@
                   </ul>
                 </div>
               </div>
-              <div>
-                <div class="mb-2">
-                  <span class="fs-5 fw-semibold"
-                    >Rolfson, Feeney and Wisoky</span
-                  >
-                </div>
-                <div class="mb-3">
-                  <span class="badge bg-secondary">Rolf-so</span>
-                </div>
-                <div>
-                  <p class="mb-1 text-secondary small">91035 Parisian Oval</p>
-                  <p class="mb-1 text-secondary small">North Dejah, WV 53609</p>
-                  <p class="mb-1 text-secondary small">(519) 078-9704</p>
-                  <p class="mb-0 text-secondary small">support@ROLF-SO.com</p>
-                </div>
-              </div>
-            </div>
+              <br />
+              <span class="fs-4 lh-l fw-medium">Rolfson, Feeney and Wisoky</span
+              ><br />
+              <div class="badge text bg-secondary mt-1">Rolf-so</div>
+              <br />
+              <br />
+              <p class="mb-1 text-secondary small">91035 Parisian Oval</p>
+              <p class="mb-1 text-secondary small">North Dejah, WV 53609</p>
+              <p class="mb-1 text-secondary small">(519) 078-9704</p>
+              <p class="mb-0 text-secondary small">support@ROLF-SO.com</p>
+            </address>
           </div>
 
-          <div class="card shadow-sm rounded-4" style="width: 30rem">
-            <div
-              style="
-                height: 4px;
-                background-color: #007aff;
-                border-radius: 0.75rem 0.75rem 0 0;
-              "
-            ></div>
-            <div class="card-body py-4 px-4">
+          <div class="card" style="width: 23rem">
+            <div class="progress">
+              <div
+                class="progress-bar bg-primary-subtle"
+                role="progressbar"
+                style="width: 60%"
+              ></div>
+            </div>
+            <address class="py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -270,32 +256,28 @@
                   </ul>
                 </div>
               </div>
-              <div>
-                <div class="mb-2">
-                  <span class="fs-5 fw-semibold">Gorczany - Stiedemann</span>
-                </div>
-                <div class="mb-3">
-                  <span class="badge bg-secondary">Gorc-za</span>
-                </div>
-                <div>
-                  <p class="mb-1 text-secondary small">52344 Gladstone Road</p>
-                  <p class="mb-1 text-secondary small">North Dejah, WV 53609</p>
-                  <p class="mb-1 text-secondary small">(000) 000-0000</p>
-                  <p class="mb-0 text-secondary small">support@GORC-ZA.com</p>
-                </div>
-              </div>
-            </div>
+              <br />
+              <span class="fs-4 lh-l fw-medium">Gorczany - Stiedemann</span
+              ><br />
+              <div class="badge text bg-secondary mt-1">Gorc-za</div>
+              <br />
+              <br />
+              <p class="mb-1 text-secondary small">52344 Gladstone Road</p>
+              <p class="mb-1 text-secondary small">North Dejah, WV 53609</p>
+              <p class="mb-1 text-secondary small">(000) 000-0000</p>
+              <p class="mb-0 text-secondary small">support@GORC-ZA.com</p>
+            </address>
           </div>
 
-          <div class="card shadow-sm rounded-4" style="width: 30rem">
-            <div
-              style="
-                height: 4px;
-                background-color: #007aff;
-                border-radius: 0.75rem 0.75rem 0 0;
-              "
-            ></div>
-            <div class="card-body py-4 px-4">
+          <div class="card" style="width: 23rem">
+            <div class="progress">
+              <div
+                class="progress-bar bg-primary-subtle"
+                role="progressbar"
+                style="width: 60%"
+              ></div>
+            </div>
+            <address class="py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -332,34 +314,29 @@
                   </ul>
                 </div>
               </div>
-              <div>
-                <div class="mb-2">
-                  <span class="fs-5 fw-semibold"
-                    >Bogan, McCullough and Pacocha</span
-                  >
-                </div>
-                <div class="mb-3">
-                  <span class="badge bg-secondary">Boga-nm</span>
-                </div>
-                <div>
-                  <p class="mb-1 text-secondary small">4647 Aletha Falls</p>
-                  <p class="mb-1 text-secondary small">Denver, CO 80202</p>
-                  <p class="mb-1 text-secondary small">(000) 000-0000</p>
-                  <p class="mb-0 text-secondary small">support@BOGA-NM.com</p>
-                </div>
-              </div>
-            </div>
+              <br />
+              <span class="fs-4 lh-l fw-medium"
+                >Bogan, McCullough and Pacocha</span
+              ><br />
+              <div class="badge text bg-secondary mt-1">Boga-nm</div>
+              <br />
+              <br />
+              <p class="mb-1 text-secondary small">4647 Aletha Falls</p>
+              <p class="mb-1 text-secondary small">Denver, CO 80202</p>
+              <p class="mb-1 text-secondary small">(000) 000-0000</p>
+              <p class="mb-0 text-secondary small">support@BOGA-NM.com</p>
+            </address>
           </div>
 
-          <div class="card shadow-sm rounded-4" style="width: 30rem">
-            <div
-              style="
-                height: 4px;
-                background-color: #007aff;
-                border-radius: 0.75rem 0.75rem 0 0;
-              "
-            ></div>
-            <div class="card-body py-4 px-4">
+          <div class="card" style="width: 23rem">
+            <div class="progress">
+              <div
+                class="progress-bar bg-primary-subtle"
+                role="progressbar"
+                style="width: 60%"
+              ></div>
+            </div>
+            <address class="py-4 px-4">
               <div class="d-flex justify-content-end">
                 <div class="dropdown d-inline">
                   <button
@@ -396,23 +373,18 @@
                   </ul>
                 </div>
               </div>
-              <div>
-                <div class="mb-2">
-                  <span class="fs-5 fw-semibold"
-                    >Beatty, Harvey and Jacobson</span
-                  >
-                </div>
-                <div class="mb-3">
-                  <span class="badge bg-secondary">Beat-ly</span>
-                </div>
-                <div>
-                  <p class="mb-1 text-secondary small">46118 Moses Dam</p>
-                  <p class="mb-1 text-secondary small">Newark, NJ 07102</p>
-                  <p class="mb-1 text-secondary small">(000) 000-0000</p>
-                  <p class="mb-0 text-secondary small">support@BEAT-LY.com</p>
-                </div>
-              </div>
-            </div>
+              <br />
+              <span class="fs-4 lh-l fw-medium"
+                >Beatty, Harvey and Jacobson</span
+              ><br />
+              <div class="badge text bg-secondary mt-1">Beat-ly</div>
+              <br />
+              <br />
+              <p class="mb-1 text-secondary small">46118 Moses Dam</p>
+              <p class="mb-1 text-secondary small">Newark, NJ 07102</p>
+              <p class="mb-1 text-secondary small">(000) 000-0000</p>
+              <p class="mb-0 text-secondary small">support@BEAT-LY.com</p>
+            </address>
           </div>
         </section>
       </section>
