@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prs — New Product</title>
+    <title>PRS — New Product</title>
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -15,104 +15,102 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <div
-          class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2"
-        >
+        <div class="pb-3 mb-4 border-bottom border-2">
           <h2>New Product</h2>
         </div>
+
         <form
-          class="d-flex flex-column gap-4 w-75"
+          class="d-flex flex-column w-75 gap-2"
           novalidate
           data-success="/products.html"
         >
-          <div class="d-flex flex-wrap gap-4 w-100">
-            <div
-              class="mb-3 flex-grow-1"
-              style="min-width: 220px; max-width: 260px"
-            >
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-25">
               <label for="productNumber" class="form-label"
                 >Product Number</label
               >
               <input
                 id="productNumber"
-                type="text"
                 class="form-control"
+                type="text"
                 placeholder="Enter product number"
                 required
               />
-              <div class="invalid-feedback">Product Number is required</div>
+              <div class="invalid-feedback">Product number is required</div>
             </div>
-            <div class="mb-3 flex-grow-1" style="min-width: 320px">
-              <label for="name" class="form-label">Product Name</label>
+
+            <div class="mb-3 w-75">
+              <label for="productName" class="form-label">Product Name</label>
               <input
-                id="name"
-                type="text"
+                id="productName"
                 class="form-control"
+                type="text"
                 placeholder="Enter product name"
                 required
               />
-              <div class="invalid-feedback">Product Name is required</div>
+              <div class="invalid-feedback">Product name is required</div>
             </div>
           </div>
 
-          <div class="d-flex flex-wrap gap-4 w-100">
-            <div
-              class="mb-3 flex-grow-1"
-              style="min-width: 160px; max-width: 180px"
-            >
+          <div class="d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-25">
               <label for="price" class="form-label">Price</label>
               <input
                 id="price"
+                class="form-control"
                 type="number"
                 step="0.01"
-                class="form-control"
-                placeholder="Enter Price"
+                placeholder="Enter product's price"
                 required
               />
               <div class="invalid-feedback">Price is required</div>
             </div>
-            <div
-              class="mb-3 flex-grow-1"
-              style="min-width: 160px; max-width: 180px"
-            >
+
+            <div class="mb-3 w-25">
               <label for="unit" class="form-label">Unit</label>
-              <input
-                id="unit"
-                type="text"
-                class="form-control"
-                placeholder="Enter unit"
-              />
+              <input id="unit" class="form-control" type="text" value="Each" />
             </div>
-            <div class="mb-3 flex-grow-2" style="min-width: 240px">
-              <label for="vendorId" class="form-label">Vendor</label>
-              <select id="vendorId" class="form-select" required>
+
+            <div class="mb-3 w-50">
+              <label for="vendor" class="form-label">Vendor</label>
+              <select id="vendor" class="form-select" required>
                 <option value="">Select Vendor...</option>
-                <option value="1">Vendor A</option>
-                <option value="2">Vendor B</option>
-                <option value="3">Vendor C</option>
+                <option value="1">Bailey Baumbach and Senger</option>
+                <option value="2">Feest - Kohler</option>
+                <option value="3">Quitzon - Heathcote</option>
+                <option value="4">Spencer Gleichner and Muller</option>
+                <option value="5">Weber Group</option>
+                <option value="6">Graham and Sons</option>
+                <option value="7">Glover - Kemmer</option>
+                <option value="8">Mills Group</option>
+                <option value="9">Mohr LLC</option>
+                <option value="10">Mayer and Sons</option>
               </select>
               <div class="invalid-feedback">Vendor is required</div>
             </div>
           </div>
-
-          <div class="d-flex justify-content-end gap-2 mt-3">
-            <a href="/products.html" class="btn btn-outline-primary">Cancel</a>
-            <button type="submit" class="btn btn-primary">
-              <svg
-                class="bi pe-none me-2"
-                width="16"
-                height="16"
-                fill="#FFFFFF"
+          <div class="d-flex flex-row justify-content-end w-100 gap-4 mt-4">
+            <div class="d-flex justify-content-end">
+              <a href="/products.html" class="btn btn-outline-primary me-2"
+                >Cancel</a
               >
-                <use href="/assets/bootstrap-icons.svg#save" />
-              </svg>
-              Save product
-            </button>
+              <button type="submit" class="btn btn-primary">
+                <svg
+                  class="bi pe-none me-2"
+                  width="16"
+                  height="16"
+                  fill="#FFFFFF"
+                >
+                  <use href="/assets/bootstrap-icons.svg#save" />
+                </svg>
+                Save product
+              </button>
+            </div>
           </div>
         </form>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/validation.js"></script>
+    <script src="/js/validation.js" defer></script>
   </body>
 </html>
