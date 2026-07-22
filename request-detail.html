@@ -20,6 +20,37 @@
         >
           <h2>Request</h2>
           <div class="d-flex justify-content-end gap-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="approveRequestBtn"
+            >
+              <svg
+                class="bi pe-none me-2"
+                width="16"
+                height="16"
+                fill="#FFFFFF"
+              >
+                <use href="/assets/bootstrap-icons.svg#hand-thumbs-up" />
+              </svg>
+              Approve
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#rejectRequestModal"
+            >
+              <svg
+                class="bi pe-none me-2"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <use href="/assets/bootstrap-icons.svg#hand-thumbs-down" />
+              </svg>
+              Reject
+            </button>
             <a href="/request-edit.html" class="btn btn-outline">
               <svg
                 class="bi pe-none me-2"
@@ -43,7 +74,11 @@
             <dt>Delivery Method</dt>
             <dd>Pickup</dd>
             <dt>Status</dt>
-            <dd><span class="badge text-bg-success">Approved</span></dd>
+            <dd>
+              <span class="badge text-bg-success" id="requestStatusBadge"
+                >Approved</span
+              >
+            </dd>
           </dl>
           <dl>
             <dt>Requested By</dt>
@@ -197,14 +232,15 @@
         </div>
         <div
           class="modal fade"
-          id="cancelModal"
+          id="rejectRequestModal"
           tabindex="-1"
+          aria-labelledby="rejectRequestModalLabel"
           aria-hidden="true"
         >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Cancel Order</h5>
+                <h5 class="modal-title" id="rejectRequestModalLabel">Reject</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -213,19 +249,19 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="rejectRequestForm" novalidate>
                   <div class="mb-3">
-                    <label class="form-label" for="cancellationReason"
-                      >Cancellation Reason</label
+                    <label class="form-label" for="rejectionReason"
+                      >Rejection Reason</label
                     >
                     <textarea
                       class="form-control"
-                      id="cancellationReason"
+                      id="rejectionReason"
                       rows="6"
                       required
                     ></textarea>
                     <div class="invalid-feedback">
-                      Cancellation reason is required
+                      Rejection reason is required
                     </div>
                   </div>
                   <div class="d-flex justify-content-end gap-2">
@@ -245,7 +281,7 @@
                       >
                         <use href="/assets/bootstrap-icons.svg#save" />
                       </svg>
-                      Confirm
+                      Save
                     </button>
                   </div>
                 </form>
@@ -256,5 +292,7 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/request-detail-actions.js"></script>
   </body>
 </html>
