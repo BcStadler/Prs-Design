@@ -18,7 +18,11 @@
         <div class="d-flex flex-column" style="max-width: 800px">
           <h1 class="mb-4 pb-3 border-bottom">New Vendor</h1>
 
-          <form class="d-flex flex-column gap-3">
+          <form
+            class="d-flex flex-column gap-3"
+            novalidate
+            data-success="/vendors.html"
+          >
             <!-- Vendor Code and Vendor Name Row -->
             <div class="d-flex gap-3">
               <div class="flex-grow-1">
@@ -28,7 +32,9 @@
                   class="form-control"
                   id="vendorCode"
                   placeholder="Enter short vendor code"
+                  required
                 />
+                <div class="invalid-feedback">Vendor Code is required</div>
               </div>
               <div class="flex-grow-1">
                 <label for="vendorName" class="form-label">Vendor Name</label>
@@ -37,7 +43,9 @@
                   class="form-control"
                   id="vendorName"
                   placeholder="Enter vendor name"
+                  required
                 />
+                <div class="invalid-feedback">Vendor Name is required</div>
               </div>
             </div>
 
@@ -49,7 +57,9 @@
                 class="form-control"
                 id="address"
                 placeholder="Enter vendor's address"
+                required
               />
+              <div class="invalid-feedback">Address is required</div>
             </div>
 
             <!-- City, State, Zip Row -->
@@ -61,12 +71,14 @@
                   class="form-control"
                   id="city"
                   placeholder="Enter city"
+                  required
                 />
+                <div class="invalid-feedback">City is required</div>
               </div>
               <div style="flex: 0 1 150px">
                 <label for="state" class="form-label">State</label>
-                <select class="form-select" id="state">
-                  <option selected>Select state...</option>
+                <select class="form-select" id="state" required>
+                  <option value="" selected disabled>Select state...</option>
                   <option>AL</option>
                   <option>AK</option>
                   <option>AZ</option>
@@ -118,6 +130,7 @@
                   <option>WI</option>
                   <option>WY</option>
                 </select>
+                <div class="invalid-feedback">State is required</div>
               </div>
               <div style="flex: 0 1 120px">
                 <label for="zip" class="form-label">Zip</label>
@@ -126,7 +139,9 @@
                   class="form-control"
                   id="zip"
                   placeholder="Enter zip code"
+                  required
                 />
+                <div class="invalid-feedback">Zip is required</div>
               </div>
             </div>
 
@@ -174,5 +189,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>

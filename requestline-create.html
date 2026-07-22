@@ -15,7 +15,7 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <form class="form w-100">
+        <form class="form w-100" novalidate data-success="/requests.html">
           <div
             class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2"
           >
@@ -26,11 +26,12 @@
             <div class="mb-4">
               <h5 class="mb-3">Item</h5>
               <label for="product" class="form-label">Product</label>
-              <select id="product" class="form-select">
-                <option selected>Select...</option>
+              <select id="product" class="form-select" required>
+                <option value="" selected disabled>Select...</option>
                 <option>Refined Ceramic Towels</option>
                 <option>Fantastic Ceramic Hat</option>
               </select>
+              <div class="invalid-feedback">Product is required</div>
             </div>
 
             <div class="mb-4">
@@ -44,9 +45,12 @@
                 id="quantity"
                 type="number"
                 class="form-control"
-                value="0"
+                placeholder="0"
+                value=""
                 min="0"
+                required
               />
+              <div class="invalid-feedback">Quantity must be at least 1</div>
             </div>
 
             <div class="mb-4">
@@ -77,5 +81,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>
