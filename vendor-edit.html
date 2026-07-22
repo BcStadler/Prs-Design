@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRS — Edit Vendor</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
@@ -12,7 +15,131 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <!-- build your page content here — refer to _data.md for data -->
+        <div class="d-flex flex-column" style="max-width: 900px">
+          <h1 class="mb-4 pb-3 border-bottom">Edit Vendor</h1>
+
+          <form class="d-flex flex-column gap-3">
+            <!-- Vendor Code and Vendor Name Row -->
+            <div class="d-flex gap-3">
+              <div style="flex: 0 0 160px">
+                <label for="vendorCode" class="form-label">Vendor Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="vendorCode"
+                  value="MCKE-NZ"
+                />
+              </div>
+              <div class="flex-grow-1">
+                <label for="vendorName" class="form-label">Vendor Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="vendorName"
+                  value="McKenzie Group"
+                />
+              </div>
+            </div>
+
+            <!-- Address Row -->
+            <div>
+              <label for="address" class="form-label">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                value="7319 Aubree Bridge"
+              />
+            </div>
+
+            <!-- City, State, Zip Row -->
+            <div class="d-flex gap-3">
+              <div class="flex-grow-1">
+                <label for="city" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  value="Wuckertside"
+                />
+              </div>
+              <div style="flex: 0 1 200px">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state">
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                  <option>California</option>
+                  <option>Colorado</option>
+                  <option>Connecticut</option>
+                  <option>Delaware</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Hawaii</option>
+                  <option>Idaho</option>
+                  <option>Illinois</option>
+                  <option>Indiana</option>
+                  <option>Iowa</option>
+                  <option>Kansas</option>
+                  <option>Kentucky</option>
+                  <option selected>Louisiana</option>
+                  <option>Maine</option>
+                  <option>Maryland</option>
+                </select>
+              </div>
+              <div style="flex: 0 1 140px">
+                <label for="zip" class="form-label">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zip"
+                  value="22245"
+                />
+              </div>
+            </div>
+
+            <!-- Phone and Email Row -->
+            <div class="d-flex gap-3">
+              <div class="flex-grow-1">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  value="9408595147"
+                />
+              </div>
+              <div class="flex-grow-1">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  value="support@MCKE-NZ.com"
+                />
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2 justify-content-end mt-3">
+              <button type="button" class="btn btn-outline-primary">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <svg
+                  class="bi pe-none me-2"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                >
+                  <use href="/assets/bootstrap-icons.svg#download" />
+                </svg>
+                Save vendor
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
