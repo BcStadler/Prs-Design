@@ -16,6 +16,10 @@
         color: var(--bs-secondary-color);
         opacity: 1;
       }
+
+      .request-actions {
+        max-width: 320px;
+      }
     </style>
   </head>
   <body>
@@ -108,24 +112,26 @@
                     <option value="jamie">Jamie Lee</option>
                   </select>
                 </div>
-              </div>
-            </div>
 
-            <div class="d-flex justify-content-end mt-4">
-              <a href="/requests.html" class="btn btn-outline-primary me-2"
-                >Cancel</a
-              >
-              <button type="submit" class="btn btn-primary">
-                <svg
-                  class="bi pe-none me-2"
-                  width="16"
-                  height="16"
-                  fill="#FFFFFF"
+                <div
+                  class="d-flex justify-content-end mt-4 request-actions w-100"
                 >
-                  <use href="/assets/bootstrap-icons.svg#save" />
-                </svg>
-                Save request
-              </button>
+                  <a href="/requests.html" class="btn btn-outline-primary me-2"
+                    >Cancel</a
+                  >
+                  <button type="submit" class="btn btn-primary">
+                    <svg
+                      class="bi pe-none me-2"
+                      width="16"
+                      height="16"
+                      fill="#FFFFFF"
+                    >
+                      <use href="/assets/bootstrap-icons.svg#save" />
+                    </svg>
+                    Save request
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </form>
