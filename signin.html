@@ -10,62 +10,60 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
-    <body class="signin">
-      <main
-        class="d-flex flex-column gap-4 justify-content-center align-items-center min-vh-100"
+  <body class="signin">
+    <main
+      class="d-flex flex-column gap-4 justify-content-center align-items-center min-vh-100"
+    >
+      <svg
+        width="150"
+        height="119"
+        viewBox="0 0 50 39"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          width="150"
-          height="119"
-          viewBox="0 0 50 39"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <path
+          d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
+          fill="#007AFF"
+        ></path>
+        <path
+          d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
+          fill="#312ECB"
+        ></path>
+      </svg>
+      <span class="fs-2 mx-lg-5 fw-semibold text-dark"
+        >Purchase Request System</span
+      >
+      <div class="card w-25 h-25 p-4">
+        <h4 class="card-title">Sign in</h4>
+        <form
+          class="d-flex flex-column"
+          novalidate
+          data-success="/requests.html"
         >
-          <path
-            d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-            fill="#007AFF"
-          ></path>
-          <path
-            d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-            fill="#312ECB"
-          ></path>
-        </svg>
-        <span class="fs-2 mx-lg-5 fw-semibold" style="color: #000000"
-          >Purchase Request System</span
-        >
-        <div class="card w-25 h-25 p-4">
-          <h4 class="card-title">Sign in</h4>
-          <form
-            class="d-flex flex-column"
-            novalidate
-            data-success="/requests.html"
-          >
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input id="username" type="text" class="form-control" required />
-              <div class="invalid-feedback">Username is required</div>
-            </div>
-            <div class="mb-1">
-              <label for="password" class="form-label">Password</label>
-              <input
-                id="password"
-                type="password"
-                class="form-control"
-                required
-              />
-              <div class="invalid-feedback">Password is required</div>
-            </div>
-            <div class="mb-4 form-text"><a href="#">Forgot It?</a></div>
-            <div class="mb-3 d-grid gap-2">
-              <button type="submit" class="btn btn-lg btn-primary">
-                Sign in
-              </button>
-            </div>
-          </form>
-        </div>
-      </main>
-    </body>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input id="username" type="text" class="form-control" required />
+            <div class="invalid-feedback">Username is required</div>
+          </div>
+          <div class="mb-1">
+            <label for="password" class="form-label">Password</label>
+            <input
+              id="password"
+              type="password"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Password is required</div>
+          </div>
+          <div class="mb-4 form-text"><a href="#">Forgot It?</a></div>
+          <div class="mb-3 d-grid gap-2">
+            <button type="submit" class="btn btn-lg btn-primary">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/validation.js"></script>
   </body>

@@ -9,12 +9,6 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-    <style>
-      /* Override card top bar color locally (no changes to styles.css or partials) */
-      .card > .progress .progress-bar {
-        background-color: #007aff !important;
-      }
-    </style>
   </head>
   <body>
     {{> header}}
@@ -36,9 +30,7 @@
           </a>
         </div>
 
-        <section
-          class="list d-flex flex-row flex-wrap bg-light gap-5 p-4 rounded-"
-        >
+        <section class="list d-flex flex-row flex-wrap bg-light gap-5 p-4">
           <div class="card" style="width: 23rem">
             <div class="progress">
               <div
